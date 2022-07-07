@@ -4,9 +4,9 @@ public:
         int sum = 0, prod = 1;
         while(n!=0)
         {
-            int a = n%10;
-            sum+=a;
-            prod*=a;
+            int rem = n%10;
+            sum+=rem;
+            prod*=rem;
             n=n/10;
             
         }
