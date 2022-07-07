@@ -10,7 +10,7 @@ public:
             n=n/10;
             
         }
-        
-        return (prod - sum);
+        int ans = prod - sum;
+        return ans;
     }
 };
