@@ -4,6 +4,7 @@ public:
         
         int m = n;
         int mask = 0; 
+        // Edge Case (Exception)
         if(n == 0) return 1;
         
         while(m != 0){
