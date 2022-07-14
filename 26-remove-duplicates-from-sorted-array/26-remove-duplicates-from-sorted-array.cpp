@@ -2,17 +2,17 @@
 class Solution {
 public:
     int removeDuplicates(vector<int>& arr) {
-        int p1=1;
-        for(int i=1; i<arr.size(); i++)
+        int left=1;
+        for(int right=1; right<arr.size(); right++)
         {
-            if(arr[i] != arr[i-1])
+            if(arr[right] != arr[right-1])
             {
-                arr[p1]=arr[i];
-                p1++;
+                arr[left]=arr[right];
+                left+=1;
             }
         }
         
-        return p1;
+        return left;
         
     }
 };
