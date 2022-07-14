@@ -9,7 +9,7 @@ public:
             if(arr[i] != arr[i-1])
             {
                 arr[p1]=arr[i];
-                p1++;
+                p1+=1;
             }
             
         }
