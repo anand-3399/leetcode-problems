@@ -1,20 +1,16 @@
 #include <bits/stdc++.h>
 class Solution {
 public:
-    int removeElement(vector<int>& arr, int val) {
-        int size = 0;
-        int j = 0;
-        for(int i=0; i<arr.size(); i++)
-        {
-            
-            if(arr[i] != val)
-            {
-                cout<<arr[i]<<" " <<i <<endl;
-                arr[j] = arr[i];
-                size+=1;
-                j+=1;
+    int removeElement(vector<int>& nums, int val) {
+        int k=0;
+        for(int i=0; i<nums.size(); i++){
+            if(nums[i] == val){
+                continue;
+            }else{
+                nums[k] = nums[i];
+                k += 1;
             }
         }
-        return size;
+        return k;
     }
 };
