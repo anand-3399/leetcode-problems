@@ -1,15 +1,15 @@
 class Solution {
 public:
     bool check(vector<int>& nums) {
-        int cnt = 0;
-        for(int i=1;i<nums.size();i++) 
-        {
+        int count = 0;
+        int n = nums.size();
+        for(int i=1;i<n;i++) 
             if(nums[i] < nums[i-1])
-                cnt++;
-        }
-        if(nums[nums.size()-1] > nums[0])
-            cnt++;
+                count+=1;
+    
+        if(nums[n-1] > nums[0])
+            count++;
         
-        return cnt<=1;
+        return count<=1;
     }
 };
