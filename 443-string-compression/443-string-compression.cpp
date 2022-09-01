@@ -6,7 +6,7 @@ public:
         while(i<n){
             int j = i+1;
             while(j<n && chars[i] == chars[j]){
-                j++;
+                j+=1;
             }
             
             // ya toh vector pura traverse krr diyaa
