@@ -12,10 +12,9 @@ public:
                 ans[col][m - row - 1] = matrix[row][col];
             }
         }
-        for(int i=0; i<n;i++){
-            for(int j=0;j<m;j++){
+        for(int i=0; i<n;i++)
+            for(int j=0;j<m;j++)
                 matrix[i][j] = ans[i][j];
-            }
-        }
+        
     }
 };
