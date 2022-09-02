@@ -14,9 +14,11 @@ public:
             if(element == target){
                 return 1;
             }
+            
             else if(element < target){
                 rowIndex++;
             }
+            
             else{
                 colIndex--;
             }
