@@ -7,6 +7,7 @@ public:
         int rowIndex = 0;
         int colIndex = col - 1;
         
+        
         while(rowIndex < row && colIndex>=0){
             int element = matrix[rowIndex][colIndex];
             
