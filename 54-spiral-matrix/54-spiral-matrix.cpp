@@ -18,32 +18,32 @@ public:
         while(count < total){
             
             // Print starting row
-            for(int i = startingCol;count < total && i <= endingCol; i++){
+            for(int i = startingCol;count < total && i <= endingCol; i+=1){
                 ans.push_back(matrix[startingRow][i]);
-                count++;
+                count+=1;
             }
-            startingRow++;
+            startingRow+=1;
             
             // Print ending column
-            for(int i = startingRow;count < total && i <= endingRow; i++){
+            for(int i = startingRow;count < total && i <= endingRow; i+=1){
                 ans.push_back(matrix[i][endingCol]);
-                count++;
+                count+=1;
             }
-            endingCol--;
+            endingCol-=1;
             
             //Printing ending row
-            for(int i = endingCol; count < total && i>=startingCol; i--){
+            for(int i = endingCol; count < total && i>=startingCol; i-=1){
                 ans.push_back(matrix[endingRow][i]);
-                count++;
+                count+=1;
             }
-            endingRow--;
+            endingRow-=1;
             
             //Printing starting column
-            for(int i =endingRow; count < total && i>=startingRow; i--){
+            for(int i =endingRow; count < total && i>=startingRow; i-=1){
                 ans.push_back(matrix[i][startingCol]);
-                count++;
+                count+=1;
             }
-            startingCol++;
+            startingCol+=1;
             
         }
         return ans;
