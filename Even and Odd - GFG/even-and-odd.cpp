@@ -15,10 +15,12 @@ class Solution {
             // EVEN
             if(i%2==0)
             {
+                // if already is Even number
                 if(arr[i] %2 == 0)
                     continue;
                 else
                 {
+                    // Find the nearest Even number and swap it
                     for(int j=i+1; j<n; j++)
                     {
                         if(arr[j]%2==0)
@@ -30,12 +32,15 @@ class Solution {
                     
                 }
             }
+            // ODD
             else
             {
+                // if already is Odd number
                 if(arr[i] %2 == 1)
                     continue;
                 else
                 {
+                    // Find the nearest Odd number and swap it
                     for(int j=i+1; j<n; j++)
                     {
                         if(arr[j]%2==1)
