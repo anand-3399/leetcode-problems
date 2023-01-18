@@ -12,13 +12,13 @@ class Solution{
   public:
   int smallestSumSubarray(vector<int>& arr){
         //Code here
-        int sum=0, ans=INT_MAX;
-        for(int i=0; i<arr.size(); i++){
-            sum+=arr[i];
-            sum=min(sum,arr[i]);
-            ans=min(ans,sum);
+        int sum=0, ans = INT_MAX;
+        for(auto i:arr)
+        {
+            sum += i;
+            sum = min(sum, i);
+            ans = min(ans, sum);
         }
-
         return ans;
     
   }
