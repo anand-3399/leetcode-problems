@@ -39,7 +39,7 @@ class Solution
         else if(n==2)
             return 3;
         int i, ans;
-        int ct=1;
+        int ct=1;   // considering default 2 as prime number we take ct=1 as default
         for(i=3; i<=INT_MAX; i+=1)
         {
             if(ct == n)
