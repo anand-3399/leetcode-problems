@@ -13,20 +13,15 @@ class Solution{
         else if(n==1)
             return arr[0];
         long long int num1=0, num2=0;
-        long long int ans;
         sort(arr, arr+n);
         for(int i=0; i<n; i++)
         {
-            // making the second number
-            if(i%2 == 1)
-            {
+            if(i%2 == 0)
                 num1 = num1*10 + arr[i];
-            }
+            
             else
-            {
                 num2 = num2*10 + arr[i];
-            }
-            // cout<<num1<<" "<<num2<<endl;
+            
         }
         
         return (long long) num1+num2;
