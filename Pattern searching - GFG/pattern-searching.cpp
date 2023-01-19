@@ -15,11 +15,10 @@ text: pattern needs to searched.
 
 bool searchPattern(string str, string pat)
 {
-    // your code here
     size_t it = str.find(pat);
-    if(it == string::npos)
-        return false;
-    return true;
+    // if(it == string::npos)
+    //     return false;
+    return (it != string::npos)?true:false;
 }
 
 
