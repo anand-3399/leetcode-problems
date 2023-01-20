@@ -10,11 +10,9 @@ using namespace std;
 class Solution {
   public:
        int RedOrGreen(int n,string s) {
-           //code here
-        int c1 = count(s.begin(), s.end(), 'R');
-        int c2 = count(s.begin(), s.end(), 'G');
-        
-        return min(c1,c2);
+        // int c1 = count(s.begin(), s.end(), 'R');
+        // int c2 = count(s.begin(), s.end(), 'G');
+        return min(count(s.begin(), s.end(), 'R'),count(s.begin(), s.end(), 'G'));
     }
 };
 
