@@ -27,7 +27,7 @@ int main()
 int findDuplicate(int a[])
 {
     // Your code goes here
-    for(int i=0; i<9; i+=4)
+    for(int i=0; i<9; i+=1)
         if(a[i] == a[i+1])
             return a[i];
 }
