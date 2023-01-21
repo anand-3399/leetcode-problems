@@ -13,6 +13,10 @@ class Solution{
 	   copy(a, a+n, res);
 	   copy(b, b+m, res+n);
 	   sort(res, res + m + n);
+	   
+	   sort(a,a+n);
+	   sort(b,b+m);
+	   merge(a, a+n, b, b+m, res);
 	}
 };
 	  
