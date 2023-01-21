@@ -13,10 +13,10 @@ class Solution{
     //Function to sort the binary array.
     void binSort(int a[], int n)
     {
-        // seconds
-        sort(a, a+n);
-        /*
-        // 1.08seconds
+        // 1.44 seconds
+        // sort(a, a+n);
+        
+        // 1.08 seconds
         int ct = count(a, a+n, 0);
         if(ct == 0 || (int)count(a, a+n, 1) == 0)
             return;
@@ -31,7 +31,7 @@ class Solution{
             else
                 a[i]=1;
         }
-        */
+        
     }
 };
 
