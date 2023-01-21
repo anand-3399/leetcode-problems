@@ -13,7 +13,22 @@ class Solution{
     //Function to sort the binary array.
     void binSort(int a[], int n)
     {
-        sort(a, a+n);
+        // sort(a, a+n);
+        int ct = count(a, a+n, 0);
+        if(ct == 0 || (int)count(a, a+n, 1) == 0)
+            return;
+        
+        for(int i=0; i<n; i++)
+        {
+            if(ct>0)
+            {
+                a[i] = 0;
+                ct--;
+            }
+            else
+                a[i]=1;
+        }
+        
     }
 };
 
