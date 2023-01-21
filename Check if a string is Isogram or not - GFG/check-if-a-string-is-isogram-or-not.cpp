@@ -13,11 +13,15 @@ class Solution
     bool isIsogram(string s)
     {
         //Your code here
-        set<char> set;
-        for(auto i:s)
-            set.insert(i);
         
-        return ((int)set.size() == (int)s.size())? true:false;
+        for(auto i:s)
+        {
+            if(count(s.begin(), s.end(), i) != 1)
+                return false;
+        }
+        return true;
+        
+        // return ((int)set.size() == (int)s.size())? true:false;
     }
 };
 
