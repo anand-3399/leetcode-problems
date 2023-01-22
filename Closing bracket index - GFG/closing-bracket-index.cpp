@@ -11,17 +11,16 @@ class Solution
         {
         	//code here.
         	stack<char>st;
-        	int index;
         	for(int i=pos; i<s.size(); i++)
         	{
         	    if(s[i] == '[')
         	        st.push('[');
+        	        
         	    else if(s[i] == ']')
-        	    {
         	        st.pop();
-        	    }
-        	        if(st.empty())
-        	            return i;
+        	        
+        	    if(st.empty())
+        	        return i;
         	}
         }
 };
