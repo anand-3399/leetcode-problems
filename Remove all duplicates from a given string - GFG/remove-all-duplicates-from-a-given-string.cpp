@@ -28,7 +28,6 @@ public:
 	    return ans;
 	    */
 	   // Method 2
-	    string ans = "";
 	    vector<char> v;
 	    for(auto i:str)
 	        if(find(v.begin(), v.end(), i) == v.end())
@@ -36,7 +35,7 @@ public:
 	    for(auto i:v)
 	        cout<<i<<"";
 	        
-	    return ans;
+	    return "";
 	}
 };
 
