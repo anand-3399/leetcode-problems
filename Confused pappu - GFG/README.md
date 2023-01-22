@@ -1,6 +1,6 @@
 # Confused pappu
 ## Easy
-<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Pappu is confused between 69. He works in the billing department of abc company and his work is to return the remaining amount to&nbsp;the customers. If the actual remaining amount is given we need to find the maximum possible extra amount given by the pappu to the customers.</span></p>
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Pappu is confused between 6 &amp; 9. He works in the billing department of abc company and his work is to return the remaining amount to&nbsp;the customers. If the actual remaining amount is given we need to find the maximum possible extra amount given by the pappu to the customers.</span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
