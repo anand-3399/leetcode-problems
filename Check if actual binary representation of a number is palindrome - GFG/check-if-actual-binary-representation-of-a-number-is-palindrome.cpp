@@ -11,7 +11,7 @@ public:
 	int binaryPalin (long long int n)
 	{
 	    // Your Code Here
-	    string s = bitset<128>(n).to_string().substr(128 - log2(n));
+	    string s = bitset<64>(n).to_string().substr(64 - log2(n));
 	    string temp=s;
 	    reverse(temp.begin(), temp.end());
 	    return (temp == s)?1:0;
