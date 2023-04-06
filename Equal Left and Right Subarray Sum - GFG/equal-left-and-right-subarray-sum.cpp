@@ -40,7 +40,6 @@ class Solution {
         {
             rightSum -= a[i];
             leftSum += a[i-1];
-            // cout<<rightSum<<" "<<leftSum<<endl;
             if(leftSum == rightSum)
                 return i+1;
         }
