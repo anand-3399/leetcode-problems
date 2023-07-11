@@ -111,10 +111,8 @@ class Solution {
     {
         // Base Case
         if(root == NULL)
-        {
-            pair<int, int> p = make_pair(0,0);
-            return p;
-        }
+            return {0,0};
+        
         
         pair<int, int> left = diameterFast(root->left);
         pair<int, int> right = diameterFast(root->right);
