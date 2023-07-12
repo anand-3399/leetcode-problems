@@ -109,9 +109,9 @@ class Solution
         queue<pair<Node*, pair<int, int> > > q;
         vector<int>ans;
         
+        // Base case
         if(!root)
             return ans;
-            
         
         q.push(make_pair(root, make_pair(0, 0)));
         
@@ -131,19 +131,12 @@ class Solution
                 q.push(make_pair(frontNode->right, make_pair(hd+1, level+1)));
         }
         
-        
         for(auto i:nodes)
-        {
             for(auto j:i.second)
-            {
                 for(auto k:j.second)
-                {
                     ans.push_back(k);
-                }
-            }
-        }
+ 
         return ans;
-        
     }
 };
 
