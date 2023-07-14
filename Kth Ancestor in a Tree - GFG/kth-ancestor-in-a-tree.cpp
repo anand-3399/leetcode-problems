@@ -120,12 +120,8 @@ void solve1(Node *root, int k, int node, int &ans, vector<int>v)
     if(root->data == node)
     {
         int size=v.size();
-        // cout<<root->data<<" "<<v.size()<<" " <<k<<endl;
         if(size > k)
-        {
-            // cout<<"HEY";
-            ans = v[((int)v.size() - k - 1)];
-        }
+            ans = v[size - k - 1];
         return;
     }
     solve1(root->left, k, node, ans, v);
