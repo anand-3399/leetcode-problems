@@ -142,10 +142,10 @@ Node* solve2(Node *root, int &k, int node)
     if(leftAns!=NULL && rightAns==NULL)
     {
         k--;
-        if(k <= 0)
+        if(k == 0)
         {
             
-            k=INT_MAX;
+            // k=INT_MAX;
             return root;
         }
         return leftAns;
@@ -153,9 +153,9 @@ Node* solve2(Node *root, int &k, int node)
     if(leftAns==NULL && rightAns!=NULL)
     {
         k--;
-        if(k <= 0)
+        if(k == 0)
         {
-            k=INT_MAX;
+            // k=INT_MAX;
             return root;
         }
         return rightAns;
@@ -172,7 +172,7 @@ int kthAncestor(Node *root, int k, int node)
     
     // By Method-2
     Node* ans = solve2(root, k, node);
-    if(ans == NULL || ans->data == node)
+    if(ans == NULL || ans->data == node)    // Edge case
         return -1;
     return ans->data;
 }
