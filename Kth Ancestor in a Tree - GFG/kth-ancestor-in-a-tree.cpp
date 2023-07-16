@@ -127,9 +127,52 @@ void solve1(Node *root, int k, int node, int &ans, vector<int>v)
     solve1(root->left, k, node, ans, v);
     solve1(root->right, k, node, ans, v);
 }
+
+Node* solve2(Node *root, int &k, int node)
+{
+    if(!root)
+        return NULL;
+        
+    if(root->data == node)
+        return root;
+        
+    Node *leftAns = solve2(root->left, k, node);
+    Node *rightAns = solve2(root->right, k, node);
+    
+    if(leftAns!=NULL && rightAns==NULL)
+    {
+        k--;
+        if(k <= 0)
+        {
+            
+            k=INT_MAX;
+            return root;
+        }
+        return leftAns;
+    }
+    if(leftAns==NULL && rightAns!=NULL)
+    {
+        k--;
+        if(k <= 0)
+        {
+            k=INT_MAX;
+            return root;
+        }
+        return rightAns;
+    }
+    return NULL;
+}
+
 int kthAncestor(Node *root, int k, int node)
 {
-    int ans=-1;
-    solve1(root, k, node, ans, {});
-    return ans;
+    // By Method-1
+    // int ans=-1;
+    // solve1(root, k, node, ans, {});
+    // return ans;
+    
+    // By Method-2
+    Node* ans = solve2(root, k, node);
+    if(ans == NULL || ans->data == node)
+        return -1;
+    return ans->data;
 }
