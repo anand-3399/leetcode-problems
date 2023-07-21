@@ -40,14 +40,6 @@ struct Node
 */
 class Solution{
     public:
-    int findPosition(int in[], int element, int n)
-    {
-        for(int i=0; i<n; i++)
-            if(in[i] == element)
-                return i;
-        return -1;
-    }
-    
     Node* solve(int in[], int pre[], int &preOrderIndex, int inorderStart, int inorderEnd, int n){
         // Base case
         if((preOrderIndex >= n) || (inorderStart > inorderEnd))
@@ -55,7 +47,6 @@ class Solution{
             
         int element = pre[preOrderIndex++];
         Node* root = new Node(element);
-        // int pos = findPosition(in, element, n);
         int pos = find(in+inorderStart, in+inorderEnd, element) - in;
         
         // recusive calls
