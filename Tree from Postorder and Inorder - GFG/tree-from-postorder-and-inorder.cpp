@@ -71,8 +71,8 @@ Node* solve(int inorder[], int postorder[], int &postorderIndex, int start, int 
         return NULL;
     
     int element = postorder[postorderIndex--];
-    int pos = find(inorder+start, inorder+end, element) - inorder;
-    // int pos = mp[element];
+    // int pos = find(inorder+start, inorder+end, element) - inorder;
+    int pos = mp[element];
     Node* root = new Node(element);
 
     // Recusive calls;
